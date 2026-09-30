@@ -1,0 +1,19 @@
+# =========================================================
+#  KnetRaid 세력 시스템 설정 파일
+#  이 파일은 3단계(세력 시스템)에서 실제로 사용됩니다.
+# =========================================================
+
+faction:
+  enabled: true
+  max-members: 10
+  friendly-fire: false
+  name:
+    min-length: 2
+    max-length: 16
+  tag:
+    min-length: 2
+    max-length: 6
+  disband:
+    require-confirmation: true
+  # 세력 해체 시 기지/약탈 데이터 처리 정책: KEEP(보존) 또는 DELETE(삭제)
+  base-data-policy-on-disband: "KEEP"

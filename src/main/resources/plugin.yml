@@ -1,0 +1,81 @@
+name: KnetRaid
+version: '${version}'
+description: RAVAGE SMP 약탈야생 서버를 위한 세력전/약탈/현상금 통합 플러그인
+author: Knetsoft
+website: https://knetsoft.kr
+
+main: kr.knetsoft.knetraid.KnetRaid
+api-version: '1.20'
+load: POSTWORLD
+folia-supported: false
+softdepend: [Vault, floodgate]
+
+commands:
+  세력:
+    description: 세력 시스템 명령어
+    usage: "/세력 <생성|해체|초대|수락|거절|탈퇴|추방|승급|강등|정보|목록|채팅|동맹|적대|순위>"
+    permission: knetraid.user
+    permission-message: "§c이 명령어를 사용할 권한이 없습니다."
+  현상금:
+    description: 현상금 시스템 명령어
+    usage: "/현상금 [등록|순위|확인|취소] [닉네임] [금액]"
+    permission: knetraid.user
+    permission-message: "§c이 명령어를 사용할 권한이 없습니다."
+  야생:
+    description: 랜덤 텔레포트로 야생의 무작위 위치로 이동합니다
+    usage: "/야생 [월드]"
+    permission: knetraid.user
+    permission-message: "§c이 명령어를 사용할 권한이 없습니다."
+  약탈:
+    description: 약탈 및 기지 시스템 정보를 확인합니다
+    usage: "/약탈 <정보|기지>"
+    permission: knetraid.user
+    permission-message: "§c이 명령어를 사용할 권한이 없습니다."
+  전투:
+    description: 전투 이탈 방지 시스템 상태를 확인합니다
+    usage: "/전투 상태"
+    permission: knetraid.user
+    permission-message: "§c이 명령어를 사용할 권한이 없습니다."
+  시즌:
+    description: 시즌 및 랭킹 정보를 확인합니다
+    usage: "/시즌 <정보|순위>"
+    permission: knetraid.user
+    permission-message: "§c이 명령어를 사용할 권한이 없습니다."
+  약탈도움말:
+    description: KnetRaid 명령어 도움말을 확인합니다
+    usage: "/약탈도움말"
+    permission: knetraid.user
+    permission-message: "§c이 명령어를 사용할 권한이 없습니다."
+  약탈관리:
+    description: KnetRaid 관리자 전용 명령어
+    usage: "/약탈관리 <도움말|재로드|정보|디버그|백업|...>"
+    permission-message: "§c이 명령어를 사용할 권한이 없습니다."
+
+permissions:
+  knetraid.admin:
+    description: KnetRaid 모든 관리자 명령어 사용 권한
+    default: op
+    children:
+      knetraid.reload: true
+      knetraid.raid.admin: true
+      knetraid.bounty.admin: true
+      knetraid.faction.admin: true
+      knetraid.season.admin: true
+  knetraid.reload:
+    description: 설정 파일 재로드 권한
+    default: op
+  knetraid.raid.admin:
+    description: 약탈 시스템 관리자 권한
+    default: op
+  knetraid.bounty.admin:
+    description: 현상금 시스템 관리자 권한
+    default: op
+  knetraid.faction.admin:
+    description: 세력 시스템 관리자 권한
+    default: op
+  knetraid.season.admin:
+    description: 시즌 시스템 관리자 권한
+    default: op
+  knetraid.user:
+    description: KnetRaid 기본 사용자 명령어 사용 권한
+    default: true

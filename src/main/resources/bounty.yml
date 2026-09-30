@@ -1,0 +1,17 @@
+# =========================================================
+#  KnetRaid 현상금 시스템 설정 파일
+#  이 단계(현상금 및 경제 연동)부터 실제로 사용됩니다.
+# =========================================================
+
+bounty:
+  enabled: true
+  min-amount: 100
+  max-amount: 1000000
+  # 0 이하로 설정하면 만료되지 않습니다.
+  expire-days: 7
+  self-bounty-allowed: false
+  faction-member-reward-allowed: false
+  # 같은 IP로 접속한 계정을 처치했을 때도 보상을 지급할지 여부 (부계정 악용 방지)
+  same-ip-reward-allowed: false
+  # 동일한 대상을 다시 처치했을 때 재지급까지 대기해야 하는 시간(분)
+  repeat-kill-cooldown-minutes: 30

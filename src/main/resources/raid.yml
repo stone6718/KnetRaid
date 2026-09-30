@@ -1,0 +1,31 @@
+# =========================================================
+#  KnetRaid 약탈/기지 시스템 설정 파일
+#  이 파일은 4단계(기지 및 약탈 시스템)에서 실제로 사용됩니다.
+# =========================================================
+
+raid:
+  enabled: true
+  # FREE: 자유 약탈 모드 (기본값, 모든 블록/컨테이너 자유롭게 파괴 및 접근 가능)
+  # PROTECTED: 기지 보호 모드 (등록된 기지의 소유자 및 허용된 세력원만 수정 가능)
+  mode: "FREE"
+  protect-spawn: true
+  spawn-radius: 100
+  # 기지 보호 모드(PROTECTED)에서 기지 중심으로부터 보호가 적용되는 반경(블록)
+  protection-radius: 15
+  alert-radius: 30
+  alert-cooldown-seconds: 60
+  # 침입 감지 주기(초). 온라인 플레이어와 기지 사이 거리를 이 주기마다 검사한다.
+  alert-check-interval-seconds: 5
+  new-player-protection-minutes: 60
+  block-protection: true
+  container-protection: true
+  faction-member-raid-allowed: false
+  active-hours:
+    enabled: false
+    start: "09:00"
+    end: "23:00"
+  logging:
+    # SELF: 자체 로그 기록 / COREPROTECT: CoreProtect 플러그인 연동
+    provider: "SELF"
+  worlds:
+    world: true

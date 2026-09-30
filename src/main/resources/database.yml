@@ -1,0 +1,24 @@
+# =========================================================
+#  KnetRaid 데이터베이스 설정 파일
+#  이 파일은 2단계(Core 및 데이터베이스)에서 실제로 사용됩니다.
+#  type: SQLITE (단일 서버 기본값) 또는 MARIADB (다중 서버 확장)
+# =========================================================
+
+storage:
+  type: SQLITE
+
+sqlite:
+  file: "database.db"
+
+mariadb:
+  host: "localhost"
+  port: 3306
+  database: "knetraid"
+  username: "root"
+  password: ""
+  use-ssl: false
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 2
+    connection-timeout-ms: 5000
+    max-lifetime-ms: 1800000

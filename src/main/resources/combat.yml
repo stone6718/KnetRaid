@@ -1,0 +1,12 @@
+# =========================================================
+#  KnetRaid 전투 이탈 방지 시스템 설정 파일
+#  이 파일은 5단계(전투 이탈 방지)에서 실제로 사용됩니다.
+# =========================================================
+
+combat:
+  enabled: true
+  duration-seconds: 15
+  logout-penalty: true
+  prevent-teleport: true
+  prevent-commands: true
+  actionbar: true

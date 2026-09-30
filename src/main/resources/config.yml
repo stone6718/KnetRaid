@@ -1,0 +1,35 @@
+# =========================================================
+#  KnetRaid 기본 설정 파일
+#  값을 수정한 뒤 /약탈관리 재로드 명령어로 즉시 적용할 수 있습니다.
+#  각 시스템의 세부 설정은 raid.yml, faction.yml, combat.yml,
+#  bounty.yml, economy.yml, season.yml, database.yml 파일에서 관리합니다.
+# =========================================================
+
+general:
+  # 콘솔에 상세 디버그 로그를 출력할지 여부
+  debug: false
+
+# 각 모듈을 개별적으로 켜고 끌 수 있습니다.
+# 아래 값을 false로 바꾸면 해당 시스템의 명령어와 기능이 비활성화됩니다.
+modules:
+  raid:
+    enabled: true
+  faction:
+    enabled: true
+  combat:
+    enabled: true
+  bounty:
+    enabled: true
+  teleport:
+    enabled: true
+  economy:
+    enabled: true
+  season:
+    enabled: true
+  bedrock:
+    enabled: true
+
+# Bedrock(Geyser/Floodgate) 플레이어 표시 관련 설정. Floodgate가 없으면 사용되지 않습니다.
+bedrock:
+  # 접속/퇴장 메시지 등에서 Bedrock 플레이어 닉네임 앞에 붙일 접두사. 빈 문자열이면 표시하지 않습니다.
+  display-prefix: "&b[BE] &r"
